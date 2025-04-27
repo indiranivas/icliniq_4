@@ -21,8 +21,7 @@ import pickle
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
-
-
+import json
 
 
 
@@ -121,7 +120,9 @@ app.config['ALLOWED_EXTENSIONS'] = {'txt', 'docx', 'pdf'}
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 # -------------------------- Firebase Admin ----------------------
-cred = credentials.Certificate('icliniq-21dd7-firebase-adminsdk-fbsvc-90d94153c6.json')
+
+firebase_creds = json.loads(os.environ['icliniq-21dd7-firebase-adminsdk-fbsvc-90d94153c6.json'])
+cred = credentials.Certificate(firebase_creds)
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://icliniq-21dd7-default-rtdb.firebaseio.com'
 })
