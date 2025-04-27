@@ -121,8 +121,7 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 # -------------------------- Firebase Admin ----------------------
 
-firebase_creds = json.loads(os.environ['icliniq-21dd7-firebase-adminsdk-fbsvc-90d94153c6.json'])
-cred = credentials.Certificate(firebase_creds)
+cred = credentials.Certificate('/etc/secrets/icliniq-21dd7-firebase-adminsdk-fbsvc-90d94153c6.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://icliniq-21dd7-default-rtdb.firebaseio.com'
 })
