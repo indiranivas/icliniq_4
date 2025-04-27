@@ -1,0 +1,11 @@
+Flask
+Werkzeug
+firebase-admin
+pyrebase4
+PyPDF2
+python-docx
+neo4j
+fuzzywuzzy
+scikit-learn
+numpy
+pandas

@@ -1,0 +1,614 @@
+Disease,Body Part,Specialist,Age Group
+abdominal hernia,Abdomen,General Surgeon,Adults
+abscess of nose,Nose,ENT Specialist,All Ages
+abscess of the lung,Lung,Pulmonologist,All Ages
+abscess of the pharynx,Pharynx,ENT Specialist,All Ages
+acanthosis nigricans,Skin,Dermatologist,All Ages
+achalasia,Esophagus,Gastroenterologist,Adults
+acne,Skin,Dermatologist,Teens/Adults
+actinic keratosis,Skin,Dermatologist,Elderly
+acute bronchiolitis,Lungs,Pediatrician,Children
+acute bronchitis,Bronchi,Pulmonologist,All Ages
+acute bronchospasm,Bronchi,Pulmonologist,All Ages
+acute glaucoma,Eye,Ophthalmologist,Elderly
+acute kidney injury,Kidney,Nephrologist,Adults/Elderly
+acute otitis media,Ear,ENT Specialist,Children
+acute pancreatitis,Pancreas,Gastroenterologist,Adults
+acute respiratory distress syndrome (ARDS),Lungs,Pulmonologist,Adults
+acute sinusitis,Sinuses,ENT Specialist,All Ages
+adrenal adenoma,Adrenal gland,Endocrinologist,Adults
+adrenal cancer,Adrenal gland,Oncologist,Adults
+alcohol abuse,Brain,Addiction Psychiatrist,Adults
+alcohol intoxication,Brain,Emergency Physician,All Ages
+alcohol withdrawal,Brain,Addiction Psychiatrist,Adults
+alcoholic liver disease,Liver,Hepatologist,Adults
+allergy,Immune system,Allergist,All Ages
+allergy to animals,Immune system,Allergist,All Ages
+alopecia,Hair/Scalp,Dermatologist,All Ages
+alzheimer disease,Brain,Neurologist,Elderly
+amblyopia,Eye,Ophthalmologist,Children
+amyloidosis,Tissues/Organs,Rheumatologist,Adults
+amyotrophic lateral sclerosis (ALS),Nervous system,Neurologist,Adults/Elderly
+anal fissure,Anus,Proctologist,Adults
+anal fistula,Anus,Proctologist,Adults
+anemia,Blood,Hematologist,All Ages
+anemia due to chronic kidney disease,Kidney/Blood,Nephrologist,Adults
+anemia due to malignancy,Blood,Hematologist,Adults
+anemia of chronic disease,Blood,Hematologist,Adults
+anxiety,Brain,Psychiatrist,All Ages
+aortic valve disease,Heart,Cardiologist,Elderly
+aplastic anemia,Bone marrow,Hematologist,All Ages
+arthritis of the hip,Hip joint,Rheumatologist,Elderly
+ascending cholangitis,Bile ducts,Gastroenterologist,Adults
+aspergillosis,Lungs,Pulmonologist,Adults
+asthma,Lungs,Pulmonologist,All Ages
+astigmatism,Eye,Ophthalmologist,All Ages
+atelectasis,Lungs,Pulmonologist,All Ages
+atonic bladder,Bladder,Urologist,Elderly
+atrial fibrillation,Heart,Cardiologist,Elderly
+atrial flutter,Heart,Cardiologist,Elderly
+atrophic skin condition,Skin,Dermatologist,Elderly
+atrophic vaginitis,Vagina,Gynecologist,Elderly
+atrophy of the corpus cavernosum,Penis,Urologist,Adults
+attention deficit hyperactivity disorder (ADHD),Brain,Psychiatrist,Children/Teens
+autism,Brain,Pediatric Neurologist,Children
+autonomic nervous system disorder,Nervous system,Neurologist,All Ages
+balanitis,Penis,Urologist,All Ages
+bell palsy,Face,Neurologist,Adults
+benign kidney cyst,Kidney,Nephrologist,Adults
+benign paroxysmal positional vertigo (BPPV),Ear,ENT Specialist,Elderly
+benign prostatic hyperplasia (BPH),Prostate,Urologist,Elderly
+bipolar disorder,Brain,Psychiatrist,Adults
+bladder cancer,Bladder,Urologist,Elderly
+bladder disorder,Bladder,Urologist,All Ages
+blepharitis,Eyelid,Ophthalmologist,All Ages
+blepharospasm,Eyelid,Ophthalmologist,Adults
+bone cancer,Bone,Oncologist,All Ages
+bone spur of the calcaneus,Heel,Orthopedic Surgeon,Adults
+brachial neuritis,Arm,Neurologist,Adults
+brain cancer,Brain,Neurosurgeon,All Ages
+breast cancer,Breast,Oncologist,Adults
+breast cyst,Breast,Gynecologist,Adults
+broken tooth,Tooth,Dentist,All Ages
+bursitis,Joints,Rheumatologist,Adults
+carbon monoxide poisoning,Blood,Emergency Physician,All Ages
+cardiac arrest,Heart,Cardiologist,Adults/Elderly
+cardiomyopathy,Heart,Cardiologist,All Ages
+carpal tunnel syndrome,Wrist,Neurologist,Adults
+cat scratch disease,Lymph nodes,Infectious Disease Specialist,All Ages
+cataract,Eye,Ophthalmologist,Elderly
+celiac disease,Small intestine,Gastroenterologist,All Ages
+cellulitis or abscess of mouth,Mouth,Dentist,All Ages
+central atherosclerosis,Blood vessels,Cardiologist,Elderly
+central retinal artery or vein occlusion,Eye,Ophthalmologist,Elderly
+cerebral palsy,Brain,Pediatric Neurologist,Children
+cervical cancer,Cervix,Gynecologist,Adults
+cervicitis,Cervix,Gynecologist,Adults
+chalazion,Eyelid,Ophthalmologist,All Ages
+chickenpox,Skin,Pediatrician,Children
+chlamydia,Reproductive system,Gynecologist/Urologist,Adults
+cholecystitis,Gallbladder,Gastroenterologist,Adults
+choledocholithiasis,Bile ducts,Gastroenterologist,Adults
+cholesteatoma,Ear,ENT Specialist,All Ages
+chondromalacia of the patella,Knee,Orthopedic Surgeon,Teens/Adults
+chorioretinitis,Eye,Ophthalmologist,All Ages
+chronic constipation,Colon,Gastroenterologist,All Ages
+chronic glaucoma,Eye,Ophthalmologist,Elderly
+chronic inflammatory demyelinating polyneuropathy (CIDP),Nerves,Neurologist,Adults
+chronic kidney disease,Kidney,Nephrologist,Adults/Elderly
+chronic knee pain,Knee,Orthopedic Surgeon,Adults
+chronic obstructive pulmonary disease (COPD),Lungs,Pulmonologist,Adults/Elderly
+chronic otitis media,Ear,ENT Specialist,All Ages
+chronic pain disorder,Nervous system,Pain Specialist,Adults
+chronic rheumatic fever,Heart,Cardiologist,Children/Adults
+chronic sinusitis,Nasal sinuses,ENT Specialist,All Ages
+chronic ulcer,Skin,Dermatologist,Adults/Elderly
+cirrhosis,Liver,Hepatologist,Adults
+coagulation (bleeding) disorder,Blood,Hematologist,All Ages
+cold sore,Lips,Dermatologist,All Ages
+colonic polyp,Colon,Gastroenterologist,Adults
+common cold,Respiratory tract,General Practitioner,All Ages
+complex regional pain syndrome,Nerves,Neurologist,Adults
+concussion,Brain,Neurologist,All Ages
+conductive hearing loss,Ear,ENT Specialist,All Ages
+congenital heart defect,Heart,Pediatric Cardiologist,Children
+congenital malformation syndrome,Various,Geneticist,Children
+conjunctivitis due to allergy,Eye,Ophthalmologist,All Ages
+conjunctivitis due to bacteria,Eye,Ophthalmologist,All Ages
+connective tissue disorder,Connective tissues,Rheumatologist,All Ages
+contact dermatitis,Skin,Dermatologist,All Ages
+conversion disorder,Brain,Psychiatrist,Adults
+cornea infection,Eye,Ophthalmologist,All Ages
+corneal abrasion,Eye,Ophthalmologist,All Ages
+corneal disorder,Eye,Ophthalmologist,All Ages
+coronary atherosclerosis,Heart,Cardiologist,Adults/Elderly
+cranial nerve palsy,Nerves,Neurologist,All Ages
+crohn disease,Intestines,Gastroenterologist,Teens/Adults
+croup,Larynx,Pediatrician,Children
+crushing injury,Varies by location,Trauma Surgeon,All Ages
+cryptococcosis,Lungs,Infectious Disease Specialist,Adults
+cryptorchidism,Testicles,Urologist,Children
+cushing syndrome,Adrenal glands,Endocrinologist,Adults
+cyst of the eyelid,Eyelid,Ophthalmologist,All Ages
+cystic fibrosis,Lungs,Pulmonologist,Children/Adults
+cysticercosis,Brain,Neurologist,All Ages
+cystitis,Bladder,Urologist,Adults
+decubitus ulcer,Skin,Dermatologist,Elderly
+deep vein thrombosis (DVT),Veins,Vascular Surgeon,Adults
+degenerative disc disease,Spine,Orthopedic Surgeon,Adults/Elderly
+dementia,Brain,Neurologist,Elderly
+dengue fever,Blood,Infectious Disease Specialist,All Ages
+dental caries,Teeth,Dentist,All Ages
+depression,Brain,Psychiatrist,All Ages
+dermatitis due to sun exposure,Skin,Dermatologist,All Ages
+diabetes,Pancreas,Endocrinologist,All Ages
+diabetes insipidus,Kidneys,Nephrologist,All Ages
+diabetic kidney disease,Kidneys,Nephrologist,Adults
+diabetic peripheral neuropathy,Nerves,Neurologist,Adults
+diabetic retinopathy,Eye,Ophthalmologist,Adults
+dislocation of the ankle,Ankle,Orthopedic Surgeon,All Ages
+dislocation of the elbow,Elbow,Orthopedic Surgeon,All Ages
+dislocation of the foot,Foot,Orthopedic Surgeon,All Ages
+dislocation of the hip,Hip,Orthopedic Surgeon,All Ages
+dislocation of the knee,Knee,Orthopedic Surgeon,All Ages
+dislocation of the patella,Knee,Orthopedic Surgeon,Teens/Adults
+dislocation of the shoulder,Shoulder,Orthopedic Surgeon,All Ages
+dislocation of the wrist,Wrist,Orthopedic Surgeon,All Ages
+diverticulitis,Colon,Gastroenterologist,Elderly
+diverticulosis,Colon,Gastroenterologist,Elderly
+drug abuse,Brain,Addiction Psychiatrist,Adults
+drug abuse (barbiturates),Brain,Addiction Psychiatrist,Adults
+drug abuse (cocaine),Brain,Addiction Psychiatrist,Adults
+drug abuse (methamphetamine),Brain,Addiction Psychiatrist,Adults
+drug abuse (opioids),Brain,Addiction Psychiatrist,Adults
+drug poisoning due to medication,Varies,Toxicologist,All Ages
+drug reaction,Varies,Allergist,All Ages
+drug withdrawal,Brain,Addiction Psychiatrist,Adults
+dry eye of unknown cause,Eye,Ophthalmologist,All Ages
+dumping syndrome,Stomach,Gastroenterologist,Adults
+dysthymic disorder,Brain,Psychiatrist,Adults
+ear drum damage,Ear,ENT Specialist,All Ages
+ear wax impaction,Ear,ENT Specialist,All Ages
+eating disorder,Brain,Psychiatrist,Teens/Adults
+ectopic pregnancy,Fallopian tubes,Gynecologist,Adults
+edward syndrome,Various,Geneticist,Children
+emphysema,Lungs,Pulmonologist,Adults/Elderly
+empyema,Lungs,Pulmonologist,All Ages
+encephalitis,Brain,Neurologist,All Ages
+endocarditis,Heart,Cardiologist,Adults
+endometrial cancer,Uterus,Gynecologist,Adults
+endometrial hyperplasia,Uterus,Gynecologist,Adults
+endometriosis,Uterus,Gynecologist,Adults
+endophthalmitis,Eye,Ophthalmologist,All Ages
+envenomation from spider or animal bite,Skin,Emergency Physician,All Ages
+ependymoma,Brain,Neurosurgeon,Children
+erectile dysfunction,Penis,Urologist,Adults
+esophageal cancer,Esophagus,Gastroenterologist,Adults
+esophageal varices,Esophagus,Gastroenterologist,Adults
+esophagitis,Esophagus,Gastroenterologist,All Ages
+extrapyramidal effect of drugs,Brain,Neurologist,Adults
+eye alignment disorder,Eye,Ophthalmologist,All Ages
+female genitalia infection,Genitals,Gynecologist,Adults
+female infertility of unknown cause,Reproductive system,Gynecologist,Adults
+fetal alcohol syndrome,Brain,Pediatrician,Children
+fibrocystic breast disease,Breast,Gynecologist,Adults
+fibromyalgia,Muscles,Rheumatologist,Adults
+flat feet,Feet,Orthopedic Surgeon,All Ages
+floaters,Eye,Ophthalmologist,Adults
+flu,Respiratory system,General Practitioner,All Ages
+fluid overload,Kidneys,Nephrologist,Adults
+folate deficiency,Blood,Hematologist,All Ages
+food allergy,Immune system,Allergist,All Ages
+foreign body in the ear,Ear,ENT Specialist,Children
+foreign body in the eye,Eye,Ophthalmologist,All Ages
+foreign body in the gastrointestinal tract,Digestive tract,Gastroenterologist,All Ages
+foreign body in the throat,Throat,ENT Specialist,All Ages
+foreign body in the vagina,Vagina,Gynecologist,Adults
+fracture of the arm,Arm,Orthopedic Surgeon,All Ages
+fracture of the facial bones,Face,Oral Surgeon,All Ages
+fracture of the finger,Finger,Orthopedic Surgeon,All Ages
+fracture of the foot,Foot,Orthopedic Surgeon,All Ages
+fracture of the hand,Hand,Orthopedic Surgeon,All Ages
+fracture of the jaw,Jaw,Oral Surgeon,All Ages
+fracture of the leg,Leg,Orthopedic Surgeon,All Ages
+fracture of the neck,Neck,Orthopedic Surgeon,Adults
+fracture of the patella,Knee,Orthopedic Surgeon,Adults
+fracture of the rib,Rib,Trauma Surgeon,Adults
+fracture of the shoulder,Shoulder,Orthopedic Surgeon,All Ages
+fracture of the skull,Skull,Neurosurgeon,All Ages
+friedrich ataxia,Nervous system,Neurologist,Children
+frostbite,Skin,Emergency Physician,All Ages
+fungal infection of the hair,Hair,Dermatologist,All Ages
+fungal infection of the skin,Skin,Dermatologist,All Ages
+ganglion cyst,Joints,Orthopedic Surgeon,Adults
+gas gangrene,Soft tissue,Infectious Disease Specialist,Adults
+gastroesophageal reflux disease (GERD),Esophagus,Gastroenterologist,All Ages
+gastrointestinal hemorrhage,Digestive tract,Gastroenterologist,Adults
+gastroparesis,Stomach,Gastroenterologist,Adults
+gestational diabetes,Pancreas,Endocrinologist,Adults
+glaucoma,Eye,Ophthalmologist,Elderly
+glucocorticoid deficiency,Adrenal glands,Endocrinologist,All Ages
+goiter,Thyroid,Endocrinologist,All Ages
+gonorrhea,Reproductive system,Gynecologist/Urologist,Adults
+gout,Joints,Rheumatologist,Adults
+gum disease,Gums,Dentist,All Ages
+hammer toe,Toes,Orthopedic Surgeon,Adults
+hashimoto thyroiditis,Thyroid,Endocrinologist,Adults
+head and neck cancer,Head/Neck,ENT Specialist,Adults
+head injury,Head,Neurologist,All Ages
+headache after lumbar puncture,Head,Neurologist,Adults
+heart attack,Heart,Cardiologist,Adults/Elderly
+heart block,Heart,Cardiologist,Adults
+heart contusion,Heart,Cardiologist,Adults
+heat exhaustion,Body,Emergency Physician,All Ages
+heat stroke,Body,Emergency Physician,All Ages
+hemarthrosis,Joints,Rheumatologist,All Ages
+hemiplegia,Nervous system,Neurologist,All Ages
+hemochromatosis,Liver,Hepatologist,Adults
+hemolytic anemia,Blood,Hematologist,All Ages
+hemophilia,Blood,Hematologist,All Ages
+hemorrhoids,Anus,Proctologist,Adults
+hepatic encephalopathy,Liver,Hepatologist,Adults
+hepatitis due to a toxin,Liver,Hepatologist,Adults
+herpangina,Mouth,Pediatrician,Children
+hiatal hernia,Stomach,Gastroenterologist,Adults
+hidradenitis suppurativa,Skin,Dermatologist,Adults
+high blood pressure,Blood vessels,Cardiologist,Adults
+hirschsprung disease,Colon,Pediatric Surgeon,Children
+hirsutism,Skin,Endocrinologist,Adults
+hormone disorder,Endocrine system,Endocrinologist,All Ages
+huntington disease,Brain,Neurologist,Adults
+hydatidiform mole,Uterus,Gynecologist,Adults
+hydrocele of the testicle,Testicle,Urologist,All Ages
+hydrocephalus,Brain,Neurosurgeon,Children
+hydronephrosis,Kidney,Urologist,All Ages
+hypercalcemia,Blood,Endocrinologist,Adults
+hypercholesterolemia,Blood,Cardiologist,Adults
+hypergammaglobulinemia,Blood,Hematologist,Adults
+hyperhidrosis,Skin,Dermatologist,All Ages
+hyperkalemia,Blood,Nephrologist,Adults
+hypernatremia,Blood,Nephrologist,Adults
+hyperopia,Eye,Ophthalmologist,All Ages
+hyperosmotic hyperketotic state,Blood,Endocrinologist,Adults
+hypertension of pregnancy,Blood vessels,Obstetrician,Adults
+hypertensive heart disease,Heart,Cardiologist,Adults
+hypertrophic obstructive cardiomyopathy (HOCM),Heart,Cardiologist,Adults
+hypocalcemia,Blood,Endocrinologist,All Ages
+hypoglycemia,Blood,Endocrinologist,All Ages
+hypokalemia,Blood,Nephrologist,Adults
+hypothermia,Body,Emergency Physician,All Ages
+hypothyroidism,Thyroid,Endocrinologist,All Ages
+hypovolemia,Blood,Emergency Physician,All Ages
+idiopathic absence of menstruation,Uterus,Gynecologist,Teens/Adults
+idiopathic excessive menstruation,Uterus,Gynecologist,Teens/Adults
+idiopathic irregular menstrual cycle,Uterus,Gynecologist,Teens/Adults
+idiopathic nonmenstrual bleeding,Uterus,Gynecologist,Adults
+ileus,Intestines,Gastroenterologist,Adults
+impetigo,Skin,Dermatologist,Children
+impulse control disorder,Brain,Psychiatrist,Adults
+indigestion,Stomach,Gastroenterologist,All Ages
+induced abortion,Uterus,Gynecologist,Adults
+infection of open wound,Wound,Infectious Disease Specialist,All Ages
+infectious gastroenteritis,Stomach/Intestines,Gastroenterologist,All Ages
+ingrown toe nail,Toe,Podiatrist,All Ages
+injury to internal organ,Varies,Trauma Surgeon,All Ages
+injury to the abdomen,Abdomen,Trauma Surgeon,All Ages
+injury to the arm,Arm,Orthopedic Surgeon,All Ages
+injury to the face,Face,Oral Surgeon,All Ages
+injury to the finger,Finger,Orthopedic Surgeon,All Ages
+injury to the hand,Hand,Orthopedic Surgeon,All Ages
+injury to the hip,Hip,Orthopedic Surgeon,Adults
+injury to the knee,Knee,Orthopedic Surgeon,All Ages
+injury to the leg,Leg,Orthopedic Surgeon,All Ages
+injury to the shoulder,Shoulder,Orthopedic Surgeon,All Ages
+injury to the trunk,Trunk,Trauma Surgeon,All Ages
+insect bite,Skin,Dermatologist,All Ages
+insulin overdose,Blood,Endocrinologist,Adults
+interstitial lung disease,Lungs,Pulmonologist,Adults
+intertrigo (skin condition),Skin,Dermatologist,All Ages
+intestinal disease,Intestines,Gastroenterologist,All Ages
+intestinal malabsorption,Intestines,Gastroenterologist,All Ages
+intestinal obstruction,Intestines,Gastroenterologist,All Ages
+intracerebral hemorrhage,Brain,Neurosurgeon,Adults
+intracranial abscess,Brain,Neurosurgeon,All Ages
+intracranial hemorrhage,Brain,Neurosurgeon,All Ages
+intussusception,Intestines,Pediatric Surgeon,Children
+iridocyclitis,Eye,Ophthalmologist,All Ages
+iron deficiency anemia,Blood,Hematologist,All Ages
+irritable bowel syndrome,Intestines,Gastroenterologist,Adults
+ischemia of the bowel,Intestines,Gastroenterologist,Adults
+ischemic heart disease,Heart,Cardiologist,Adults
+itching of unknown cause,Skin,Dermatologist,All Ages
+jaw disorder,Jaw,Oral Surgeon,All Ages
+joint effusion,Joints,Rheumatologist,Adults
+juvenile rheumatoid arthritis,Joints,Pediatric Rheumatologist,Children
+kidney cancer,Kidney,Urologist,Adults
+kidney disease due to longstanding hypertension,Kidney,Nephrologist,Adults
+kidney failure,Kidney,Nephrologist,Adults
+kidney stone,Kidney,Urologist,Adults
+knee ligament or meniscus tear,Knee,Orthopedic Surgeon,Adults
+labyrinthitis,Ear,ENT Specialist,All Ages
+lateral epicondylitis (tennis elbow),Elbow,Orthopedic Surgeon,Adults
+leukemia,Blood,Hematologist,All Ages
+lewy body dementia,Brain,Neurologist,Elderly
+lice,Hair/Skin,Dermatologist,All Ages
+lipoma,Skin,Dermatologist,All Ages
+liver cancer,Liver,Hepatologist,Adults
+liver disease,Liver,Hepatologist,Adults
+lung cancer,Lung,Pulmonologist,Adults
+lung contusion,Lung,Pulmonologist,All Ages
+lyme disease,Joints,Rheumatologist,All Ages
+lymphadenitis,Lymph nodes,Infectious Disease Specialist,All Ages
+lymphangitis,Lymph vessels,Infectious Disease Specialist,All Ages
+lymphedema,Lymphatic system,Vascular Surgeon,All Ages
+lymphoma,Lymphatic system,Hematologist,All Ages
+macular degeneration,Eye,Ophthalmologist,Elderly
+magnesium deficiency,Blood,Nephrologist,Adults
+malaria,Blood,Infectious Disease Specialist,All Ages
+malignant hypertension,Blood vessels,Cardiologist,Adults
+marijuana abuse,Brain,Addiction Psychiatrist,Adults
+mastoiditis,Mastoid bone,ENT Specialist,Children
+meckel diverticulum,Small intestine,Pediatric Surgeon,Children
+meniere disease,Ear,ENT Specialist,Adults
+meningioma,Brain,Neurosurgeon,Adults
+meningitis,Brain,Neurologist,All Ages
+menopause,Reproductive system,Gynecologist,Adults
+metabolic disorder,Metabolism,Endocrinologist,All Ages
+metastatic cancer,Varies,Oncologist,Adults
+migraine,Brain,Neurologist,Adults
+mitral valve disease,Heart,Cardiologist,Adults
+mittelschmerz,Ovaries,Gynecologist,Adults
+mononeuritis,Nerves,Neurologist,Adults
+mononucleosis,Blood,Infectious Disease Specialist,Teens/Adults
+moyamoya disease,Brain,Neurosurgeon,All Ages
+multiple myeloma,Bone marrow,Hematologist,Elderly
+muscle spasm,Muscles,Neurologist,All Ages
+muscular dystrophy,Muscles,Neurologist,Children
+myasthenia gravis,Muscles,Neurologist,Adults
+myelodysplastic syndrome,Bone marrow,Hematologist,Elderly
+myocarditis,Heart,Cardiologist,All Ages
+myoclonus,Nerves,Neurologist,All Ages
+myopia,Eye,Ophthalmologist,All Ages
+myositis,Muscles,Rheumatologist,Adults
+narcolepsy,Brain,Neurologist,Adults
+neonatal jaundice,Liver,Pediatrician,Newborns
+neuralgia,Nerves,Neurologist,Adults
+neurofibromatosis,Nervous system,Neurologist,All Ages
+neuropathy due to drugs,Nerves,Neurologist,Adults
+nonalcoholic liver disease (NASH),Liver,Hepatologist,Adults
+noninfectious gastroenteritis,Stomach/Intestines,Gastroenterologist,All Ages
+normal pressure hydrocephalus,Brain,Neurologist,Elderly
+nose disorder,Nose,ENT Specialist,All Ages
+obesity,Body,Endocrinologist,All Ages
+obstructive sleep apnea (OSA),Airway,Pulmonologist,Adults
+omphalitis,Navel,Pediatrician,Newborns
+onychomycosis,Nails,Dermatologist,Adults
+open wound due to trauma,Varies,Trauma Surgeon,All Ages
+open wound from surgical incision,Varies,Surgeon,All Ages
+open wound of the abdomen,Abdomen,Trauma Surgeon,All Ages
+open wound of the arm,Arm,Trauma Surgeon,All Ages
+open wound of the back,Back,Trauma Surgeon,All Ages
+open wound of the cheek,Cheek,Oral Surgeon,All Ages
+open wound of the chest,Chest,Trauma Surgeon,All Ages
+open wound of the eye,Eye,Ophthalmologist,All Ages
+open wound of the finger,Finger,Orthopedic Surgeon,All Ages
+open wound of the foot,Foot,Orthopedic Surgeon,All Ages
+open wound of the knee,Knee,Orthopedic Surgeon,All Ages
+open wound of the lip,Lip,Oral Surgeon,All Ages
+open wound of the mouth,Mouth,Oral Surgeon,All Ages
+open wound of the neck,Neck,Trauma Surgeon,All Ages
+open wound of the shoulder,Shoulder,Orthopedic Surgeon,All Ages
+oppositional disorder,Brain,Psychiatrist,Children
+optic neuritis,Eye,Ophthalmologist,Adults
+oral leukoplakia,Mouth,Dentist,Adults
+oral mucosal lesion,Mouth,Dentist,All Ages
+oral thrush (yeast infection),Mouth,Dentist,All Ages
+orbital cellulitis,Eye,Ophthalmologist,All Ages
+orthostatic hypotension,Blood vessels,Cardiologist,Elderly
+osteoarthritis,Joints,Rheumatologist,Elderly
+osteochondroma,Bone,Orthopedic Surgeon,Teens/Adults
+osteochondrosis,Bone,Orthopedic Surgeon,Children
+osteoporosis,Bones,Endocrinologist,Elderly
+otitis externa (swimmer's ear),Ear,ENT Specialist,All Ages
+otitis media,Ear,ENT Specialist,Children
+otosclerosis,Ear,ENT Specialist,Adults
+ovarian cancer,Ovaries,Gynecologist,Adults
+ovarian cyst,Ovaries,Gynecologist,Adults
+ovarian torsion,Ovaries,Gynecologist,Adults
+overflow incontinence,Bladder,Urologist,Elderly
+pain after an operation,Varies,Surgeon,All Ages
+pain disorder affecting the neck,Neck,Neurologist,Adults
+pancreatic cancer,Pancreas,Gastroenterologist,Adults
+Panic attack,Brain,Psychiatrist,Teens/Adult
+Panic disorder,Brain,Psychiatrist,Teens/Adult
+Parasitic disease,Varies,Infectious Disease Specialist,All ages
+Parathyroid adenoma,Parathyroid,Endocrinologist,Adult/Elderly
+Parkinson disease,Brain,Neurologist,Elderly
+Paroxysmal supraventricular tachycardia,Heart,Cardiologist,All ages
+Paroxysmal ventricular tachycardia,Heart,Cardiologist,All ages
+Pelvic fistula,Pelvis,Gynecologist/Urologist,Adult
+Pelvic inflammatory disease,Pelvis,Gynecologist,Adult
+Pelvic organ prolapse,Pelvis,Gynecologist,Adult/Elderly
+Pemphigus,Skin,Dermatologist,All ages
+Pericarditis,Heart,Cardiologist,All ages
+Peripheral arterial embolism,Arteries,Vascular Surgeon,Adult/Elderly
+Perirectal infection,Rectum,Proctologist,All ages
+Peritonitis,Abdomen,General Surgeon,All ages
+Peritonsillar abscess,Tonsils,ENT Specialist,All ages
+Persistent vomiting of unknown cause,Stomach,Gastroenterologist,All ages
+Peyronie disease,Penis,Urologist,Adult
+Pharyngitis,Throat,ENT Specialist,All ages
+Pilonidal cyst,Sacral region,General Surgeon,Teens/Adult
+Pinguecula,Eye,Ophthalmologist,Adult/Elderly
+Pinworm infection,Intestines,Infectious Disease Specialist,Children
+Pituitary adenoma,Pituitary,Endocrinologist/Neurosurgeon,All ages
+Pituitary disorder,Pituitary,Endocrinologist,All ages
+Pityriasis rosea,Skin,Dermatologist,Teens/Adult
+Placental abruption,Placenta,Obstetrician,Adult (Pregnant)
+Plantar fasciitis,Foot,Orthopedist/Podiatrist,Adult
+Pneumonia,Lungs,Pulmonologist,All ages
+Poisoning due to analgesics,Varies,Toxicologist,All ages
+Poisoning due to anticonvulsants,Varies,Toxicologist,All ages
+Poisoning due to antidepressants,Varies,Toxicologist,All ages
+Poisoning due to antihypertensives,Varies,Toxicologist,All ages
+Poisoning due to antimicrobial drugs,Varies,Toxicologist,All ages
+Poisoning due to ethylene glycol,Kidneys,Nephrologist/Toxicologist,All ages
+Poisoning due to gas,Lungs,Pulmonologist/Toxicologist,All ages
+Poisoning due to sedatives,Brain,Toxicologist/Psychiatrist,All ages
+Polycystic kidney disease,Kidneys,Nephrologist,All ages
+Polycystic ovarian syndrome (PCOS),Ovaries,Endocrinologist/Gynecologist,Teens/Adult
+Polycythemia vera,Blood,Hematologist,Adult/Elderly
+Polymyalgia rheumatica,Muscles,Rheumatologist,Elderly
+Postoperative infection,Varies,Infectious Disease Specialist,All ages
+Postpartum depression,Brain,Psychiatrist,Adult (Postpartum)
+Post-traumatic stress disorder (PTSD),Brain,Psychiatrist,All ages
+Preeclampsia,Placenta,Obstetrician,Adult (Pregnant)
+Premature atrial contractions (PACs),Heart,Cardiologist,All ages
+Premature ovarian failure,Ovaries,Endocrinologist,Adult
+Premature ventricular contractions (PVCs),Heart,Cardiologist,All ages
+Premenstrual tension syndrome,Uterus,Gynecologist,Teens/Adult
+Presbyacusis,Ear,Audiologist/ENT Specialist,Elderly
+Presbyopia,Eye,Ophthalmologist,Adult/Elderly
+Priapism,Penis,Urologist,Adult
+Primary immunodeficiency,Immune system,Immunologist,All ages
+Primary insomnia,Brain,Neurologist/Psychiatrist,Adult
+Primary kidney disease,Kidneys,Nephrologist,All ages
+Primary thrombocythemia,Blood,Hematologist,Adult/Elderly
+Problem during pregnancy,Uterus,Obstetrician,Adult (Pregnant)
+Prostatitis,Prostate,Urologist,Adult
+Protein deficiency,Blood,Nutritionist/Hematologist,All ages
+Pseudohypoparathyroidism,Parathyroid,Endocrinologist,All ages
+Psoriasis,Skin,Dermatologist,All ages
+Psychosexual disorder,Brain,Psychiatrist,Adult
+Psychotic disorder,Brain,Psychiatrist,Teens/Adult
+Pterygium,Eye,Ophthalmologist,Adult/Elderly
+Pulmonary congestion,Lungs,Pulmonologist/Cardiologist,Elderly
+Pulmonary eosinophilia,Lungs,Pulmonologist,All ages
+Pulmonary fibrosis,Lungs,Pulmonologist,Adult/Elderly
+Pulmonary hypertension,Lungs,Pulmonologist/Cardiologist,Adult/Elderly
+Pulmonic valve disease,Heart,Cardiologist,All ages
+Pyelonephritis,Kidneys,Nephrologist,All ages
+Pyloric stenosis,Stomach,Pediatric Surgeon,Infants
+Pyogenic skin infection,Skin,Dermatologist,All ages
+Raynaud disease,Blood vessels,Rheumatologist,All ages
+Reactive arthritis,Joints,Rheumatologist,Adult
+Rectal disorder,Rectum,Proctologist,All ages
+Restless leg syndrome,Legs,Neurologist,Adult/Elderly
+Retinal detachment,Eye,Ophthalmologist,Adult/Elderly
+Retinopathy due to high blood pressure,Eye,Ophthalmologist,Adult/Elderly
+Rheumatoid arthritis,Joints,Rheumatologist,Adult
+Rosacea,Skin,Dermatologist,Adult
+Rotator cuff injury,Shoulder,Orthopedist,Adult/Elderly
+Salivary gland disorder,Salivary glands,ENT Specialist,All ages
+Sarcoidosis,Lungs,Pulmonologist,Adult
+Scabies,Skin,Dermatologist,All ages
+Scarlet fever,Skin,Pediatrician,Children
+Schizophrenia,Brain,Psychiatrist,Teens/Adult
+Sciatica,Spine,Neurologist/Orthopedist,Adult
+Scleritis,Eye,Ophthalmologist,Adult
+Scleroderma,Skin,Rheumatologist,Adult
+Scurvy,Blood,Nutritionist,All ages
+Seasonal allergies (hay fever),Immune system,Allergist,All ages
+Seborrheic dermatitis,Skin,Dermatologist,All ages
+Sensorineural hearing loss,Ear,Audiologist/ENT Specialist,Adult/Elderly
+Sepsis,Blood,Infectious Disease Specialist,All ages
+Sick sinus syndrome,Heart,Cardiologist,Elderly
+Sickle cell anemia,Blood,Hematologist,All ages
+Sickle cell crisis,Blood,Hematologist,All ages
+Sinus bradycardia,Heart,Cardiologist,All ages
+Skin disorder,Skin,Dermatologist,All ages
+Skin polyp,Skin,Dermatologist,All ages
+Smoking or tobacco addiction,Lungs,Pulmonologist,Teens/Adult
+Social phobia,Brain,Psychiatrist,Teens/Adult
+Somatization disorder,Brain,Psychiatrist,Adult
+Spermatocele,Testicles,Urologist,Adult
+Spherocytosis,Blood,Hematologist,All ages
+Spina bifida,Spine,Neurologist/Neurosurgeon,Children
+Spinal stenosis,Spine,Orthopedist/Neurosurgeon,Adult/Elderly
+Spondylitis,Spine,Rheumatologist,Adult
+Spondylosis,Spine,Orthopedist,Adult/Elderly
+Sporotrichosis,Skin,Dermatologist,All ages
+Sprain or strain,Muscles/Joints,Orthopedist,All ages
+Stenosis of the tear duct,Eye,Ophthalmologist,Children
+Stress incontinence,Bladder,Urologist/Gynecologist,Adult/Elderly
+Stroke,Brain,Neurologist,Adult/Elderly
+Stye,Eyelid,Ophthalmologist,All ages
+Subacute thyroiditis,Thyroid,Endocrinologist,Adult
+Subconjunctival hemorrhage,Eye,Ophthalmologist,All ages
+Subdural hemorrhage,Brain,Neurosurgeon,Elderly
+Substance-related mental disorder,Brain,Psychiatrist,Teens/Adult
+Syndrome of inappropriate secretion of ADH (SIADH),Brain,Endocrinologist/Neurologist,All ages
+Syphilis,Reproductive system,Infectious Disease Specialist,Adult
+Syringomyelia,Spine,Neurologist/Neurosurgeon,Adult
+Systemic lupus erythematosus (SLE),Immune system,Rheumatologist,Adult
+Teething syndrome,Gums,Pediatrician,Infants
+Temporary or benign blood in urine,Urinary tract,Urologist,All ages
+Temporomandibular joint disorder,Jaw,Dentist/ENT Specialist,Adult
+Tendinitis,Tendons,Orthopedist,Adult
+Tension headache,Head,Neurologist,All ages
+Testicular cancer,Testicles,Oncologist/Urologist,Adult
+Testicular disorder,Testicles,Urologist,All ages
+Testicular torsion,Testicles,Urologist,Children/Adult
+Thoracic aortic aneurysm,Aorta,Vascular Surgeon,Adult/Elderly
+Thoracic outlet syndrome,Nerves,Neurologist,Adult
+Threatened pregnancy,Uterus,Obstetrician,Adult (Pregnant)
+Thrombocytopenia,Blood,Hematologist,All ages
+Thrombophlebitis,Veins,Vascular Surgeon,Adult
+Thyroid cancer,Thyroid,Endocrinologist/Oncologist,Adult
+Thyroid disease,Thyroid,Endocrinologist,All ages
+Thyroid nodule,Thyroid,Endocrinologist,Adult
+Tic (movement) disorder,Brain,Neurologist,Children/Teens
+Tietze syndrome,Chest,Rheumatologist,Adult
+Tinnitus of unknown cause,Ear,ENT Specialist,Adult/Elderly
+Tooth abscess,Tooth,Dentist,All ages
+Tooth disorder,Tooth,Dentist,All ages
+Torticollis,Neck,Neurologist/Orthopedist,All ages
+Toxic multinodular goiter,Thyroid,Endocrinologist,Adult
+Tracheitis,Trachea,ENT Specialist,Children
+Transient ischemic attack,Brain,Neurologist,Adult/Elderly
+Trichinosis,Muscles,Infectious Disease Specialist,All ages
+Trichomonas infection,Reproductive system,Gynecologist,Adult
+Tricuspid valve disease,Heart,Cardiologist,All ages
+Trigger finger (finger disorder),Finger,Orthopedist,Adult
+Tuberculosis,Lungs,Pulmonologist,All ages
+Tuberous sclerosis,Brain,Neurologist,Children
+Turner syndrome,Chromosomes,Endocrinologist,Children/Teens
+Typhoid fever,Intestines,Infectious Disease Specialist,All ages
+Urethral disorder,Urethra,Urologist,All ages
+Urethral stricture,Urethra,Urologist,Adult
+Urethral valves,Urethra,Urologist,Children
+Urethritis,Urethra,Urologist,Adult
+Urge incontinence,Bladder,Urologist,Adult/Elderly
+Urinary tract obstruction,Urinary tract,Urologist,All ages
+Uterine atony,Uterus,Obstetrician,Adult (Postpartum)
+Uterine cancer,Uterus,Oncologist/Gynecologist,Adult
+Uterine fibroids,Uterus,Gynecologist,Adult
+Uveitis,Eye,Ophthalmologist,All ages
+VACTERL syndrome,Various,Pediatrician,Children
+Vaginal cyst,Vagina,Gynecologist,Adult
+Vaginal yeast infection,Vagina,Gynecologist,Adult
+Vaginismus,Vagina,Gynecologist,Adult
+Vaginitis,Vagina,Gynecologist,Adult
+Valley fever,Lungs,Pulmonologist,All ages
+Varicocele of the testicles,Testicles,Urologist,Adult
+Varicose veins,Veins,Vascular Surgeon,Adult
+Vasculitis,Blood vessels,Rheumatologist,All ages
+Venous insufficiency,Veins,Vascular Surgeon,Adult/Elderly
+Vertebrobasilar insufficiency,Blood vessels,Neurologist,Elderly
+Vesicoureteral reflux,Urinary tract,Urologist,Children
+Viral exanthem,Skin,Dermatologist,Children
+Viral warts,Skin,Dermatologist,All ages
+Vitamin A deficiency,Blood,Nutritionist,All ages
+Vitamin B12 deficiency,Blood,Hematologist,All ages
+Vitamin D deficiency,Blood,Nutritionist,All ages
+Vitreous degeneration,Eye,Ophthalmologist,Elderly
+Vitreous hemorrhage,Eye,Ophthalmologist,Adult/Elderly
+Vocal cord polyp,Larynx,ENT Specialist,Adult
+Volvulus,Intestines,Gastroenterologist,Children
+Von Willebrand disease,Blood,Hematologist,All ages
+Vulvar cancer,Vulva,Oncologist/Gynecologist,Adult
+Vulvodynia,Vulva,Gynecologist,Adult
+Wernicke-Korsakoff syndrome,Brain,Neurologist/Psychiatrist,Adult/Elderly
+Whooping cough,Respiratory tract,Pediatrician,Children
+Wilson disease,Liver,Hepatologist,All ages
+Yeast infection,Varies,Gynecologist/Dermatologist,All ages

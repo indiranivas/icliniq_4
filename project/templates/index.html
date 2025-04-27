@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICLINIQ | Symptom Analyzer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4f0fb 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
+        /* Glass card effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+        }
+        
+        /* Sidebar styles */
+        .sidebar {
+            width: 300px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100vh;
+            position: fixed;
+            z-index: 40;
+        }
+        
+        .main-content {
+            margin-left: 300px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        /* Collapse button */
+        .sidebar-collapse-btn {
+            position: absolute;
+            right: -12px;
+            top: 20px;
+            background: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar-collapse-btn:hover {
+            transform: scale(1.1);
+            background: #f3f4f6;
+        }
+        
+        .sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+        
+        .main-content.expanded {
+            margin-left: 0;
+        }
+        
+        /* Pill styles */
+        .symptom-pill {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            border: 1px solid rgba(186, 230, 253, 0.5);
+            transition: all 0.2s ease;
+        }
+        
+        .symptom-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(99, 102, 241, 0.1);
+        }
+        
+        .specialist-pill {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 1px solid rgba(209, 250, 229, 0.5);
+            transition: all 0.2s ease;
+        }
+        
+        .specialist-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.1);
+        }
+        
+        /* Confidence indicators */
+        .confidence-high {
+            background: linear-gradient(135deg, #d1fae5 0%, #6ee7b7 100%);
+        }
+        
+        .confidence-medium {
+            background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+        }
+        
+        .confidence-low {
+            background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 100%);
+        }
+        
+        /* Button styles */
+        .upload-btn {
+            background: linear-gradient(135deg, #e0f2fe 0%, #7dd3fc 100%);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(125, 211, 252, 0.3);
+        }
+        
+        .analyze-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .analyze-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        .new-chat-btn {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .new-chat-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        /* Sidebar items */
+        .sidebar-item {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .sidebar-item:hover {
+            background-color: rgba(99, 102, 241, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .sidebar-item.active {
+            background-color: rgba(99, 102, 241, 0.2);
+            border-left: 3px solid var(--primary);
+        }
+        
+        /* File type colors */
+        .file-pdf {
+            color: #f56565;
+        }
+        
+        .file-doc {
+            color: #2b6cb0;
+        }
+        
+        .file-txt {
+            color: #718096;
+        }
+        
+        /* Animations */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes wave {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        /* Animation classes */
+        .blob {
+            animation: blob 7s infinite ease-in-out;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        .float {
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s forwards ease-out;
+        }
+        
+        .spin {
+            animation: spin 1s linear infinite;
+        }
+        
+        .wave {
+            display: inline-block;
+            animation: wave 1.5s infinite ease-in-out;
+        }
+        
+        .wave:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .wave:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        .wave:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+        
+        .wave:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+        
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        /* Loading animation */
+        .loading-dots {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .loading-dots span {
+            width: 8px;
+            height: 8px;
+            margin: 0 2px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        
+        .loading-dots span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        
+        .loading-dots span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        
+        @keyframes bounce {
+            0%, 80%, 100% { 
+                transform: scale(0);
+            } 40% { 
+                transform: scale(1);
+            }
+        }
+        
+        /* Analysis animation */
+        .analyzing-container {
+            position: relative;
+            height: 120px;
+            width: 120px;
+            margin: 0 auto;
+        }
+        
+        .analyzing-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: var(--primary);
+            animation: spin 1.5s linear infinite;
+        }
+        
+        .analyzing-circle:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            border-width: 4px;
+            border-top-color: var(--secondary);
+            animation-duration: 2s;
+        }
+        
+        .analyzing-circle:nth-child(2) {
+            top: 15%;
+            left: 15%;
+            width: 70%;
+            height: 70%;
+            border-top-color: var(--accent);
+            animation-duration: 1.5s;
+            animation-direction: reverse;
+        }
+        
+        .analyzing-circle:nth-child(3) {
+            top: 30%;
+            left: 30%;
+            width: 40%;
+            height: 40%;
+            border-top-color: var(--primary);
+            animation-duration: 1s;
+        }
+        
+        /* Result card animations */
+        .result-card {
+            transform-origin: top center;
+            animation: cardAppear 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            opacity: 0;
+        }
+        
+        @keyframes cardAppear {
+            0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        
+        /* Progress bar animation */
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 overflow-hidden -z-10">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 blob"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 blob animation-delay-2000"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 blob animation-delay-4000"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 blob animation-delay-6000"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+            <i class="fas fa-heartbeat text-purple-600 text-xl"></i>
+            <span class="text-lg font-bold text-gray-700">ICLINIQ</span>
+            </div>
+            <div class="flex items-center space-x-4">
+            {% if user %}
+                <span class="text-gray-600 text-sm">Hi, {{ user.name }}</span>
+                <a href="{{ url_for('logout') }}" class="text-red-500 hover:text-red-700 text-sm font-medium">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Login</a>
+                <a href="{{ url_for('signup') }}" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Sign Up</a>
+            {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <!-- Padding to push content below navbar -->
+    <div class="h-16"></div>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-white shadow-lg" id="sidebar">
+            <div class="sidebar-collapse-btn" id="collapseBtn">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </div>
+            <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                <h2 class="text-xl font-semibold text-gray-800 flex items-center">
+                    <i class="fas fa-history mr-2 text-purple-600"></i> Chat History
+                </h2>
+                <div class="flex items-center space-x-2">
+                    <form action="/clear-history" method="POST" onsubmit="return confirm('Are you sure you want to clear all chat history?');">
+                        <button type="submit" class="text-xs text-red-500 hover:text-red-700 flex items-center transition-all duration-300 hover:scale-105">
+                            <i class="fas fa-trash-alt mr-1"></i> Clear
+                        </button>
+                    </form>
+                    <form action="/new-chat" method="POST">
+                        <button type="submit" class="new-chat-btn text-sm px-3 py-1 rounded-md flex items-center">
+                            <i class="fas fa-plus mr-1"></i> New
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="overflow-y-auto h-[calc(100vh-120px)]">
+                {% for item in chat_history %}
+                <form method="POST" class="sidebar-item p-3 border-b border-gray-100 block {% if item.id == current_chat_id %}file-active{% endif %}">
+                    <input type="hidden" name="switch_chat" value="{{ item.id }}">
+                    <button type="submit" class="w-full text-left">
+                        <div class="flex justify-between items-start">
+                            <div class="text-sm font-medium text-gray-700 truncate">
+                                {% if item.input|length > 30 %}
+                                    {{ item.input[:30] }}...
+                                {% else %}
+                                    {{ item.input }}
+                                {% endif %}
+                            </div>
+                            <span class="text-xs text-gray-500">{{ item.time }}</span>
+                        </div>
+                        {% if item.has_file %}
+                        <div class="flex items-center mt-1">
+                            <i class="fas fa-file text-xs mr-1 
+                                {% if item.file_info.type == 'pdf' %}file-pdf
+                                {% elif item.file_info.type == 'docx' %}file-doc
+                                {% else %}file-txt{% endif %}"></i>
+                            <span class="text-xs text-gray-500 truncate">{{ item.file_info.name }}</span>
+                        </div>
+                        {% endif %}
+                        <div class="mt-1">
+                            <span class="text-xs px-2 py-0.5 rounded-full 
+                                {% if item.results %}bg-green-100 text-green-800
+                                {% else %}bg-red-100 text-red-800{% endif %}">
+                                {% if item.results %}Found results{% else %}No results{% endif %}
+                            </span>
+                        </div>
+                    </button>
+                </form>
+                {% else %}
+                <div class="p-4 text-center text-gray-500">
+                    <i class="fas fa-comment-slash text-2xl mb-2"></i>
+                    <p>No chat history yet</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content flex-1" id="mainContent">
+            <!-- Mobile sidebar toggle -->
+            <button id="sidebarToggle" class="lg:hidden fixed left-4 top-4 z-40 bg-white p-2 rounded-md shadow-md transition-all hover:scale-105">
+                <i class="fas fa-bars text-purple-600"></i>
+            </button>
+
+            <div class="container mx-auto px-4 py-8 lg:py-12">
+                <!-- Header -->
+                <div class="text-center mb-12 pt-4 lg:pt-0 fade-in">
+                    <div class="inline-flex items-center justify-center mb-4 float">
+                        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg pulse">
+                            <i class="fas fa-heartbeat text-2xl text-purple-600"></i>
+                        </div>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3 fade-in delay-100">ICLINIQ</h1>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in delay-200">Advanced symptom analysis powered by medical knowledge graphs</p>
+                </div>
+
+                <!-- Main Card -->
+                <div class="glass-card max-w-4xl mx-auto p-8 mb-16 fade-in delay-300">
+                    <form method="POST" enctype="multipart/form-data" class="space-y-6" id="symptomForm">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Describe your symptoms:</label>
+                            <textarea name="symptoms" rows="4" class="w-full px-4 py-3 border-0 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white bg-opacity-70 transition-all duration-300 hover:shadow-md focus:shadow-lg" placeholder="Example: 'I've been experiencing headaches and nausea for 3 days...'">{{ input_text }}</textarea>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="w-full sm:w-auto">
+                                <label class="upload-btn cursor-pointer inline-flex items-center justify-center px-6 py-3 rounded-xl text-blue-800 font-medium shadow-sm w-full">
+                                    <i class="fas fa-file-upload mr-2"></i>
+                                    <span id="uploadText">Upload Medical File</span>
+                                    <input type="file" name="file" id="fileInput" class="hidden" accept=".txt,.docx,.pdf">
+                                </label>
+                                <div class="text-xs text-gray-500 mt-2 text-center sm:text-left">Supports: TXT, DOCX, PDF</div>
+                                
+                                <!-- File upload indicator -->
+                                <div id="fileIndicator" class="hidden mt-3 fade-in">
+                                    <div class="inline-flex items-center bg-blue-50 rounded-full px-3 py-1">
+                                        <i class="fas fa-file text-blue-500 mr-2" id="fileIcon"></i>
+                                        <span class="text-sm text-blue-800 font-medium" id="fileName"></span>
+                                        <button type="button" class="ml-2 text-blue-500 hover:text-blue-700 transition-transform hover:scale-110" id="clearFile">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="analyze-btn w-full sm:w-auto px-8 py-3 rounded-xl text-white font-medium shadow-sm flex items-center justify-center" id="analyzeBtn">
+                                <span id="analyzeText">Analyze Symptoms</span>
+                                <span id="analyzeLoading" class="hidden ml-2 loading-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="hidden max-w-4xl mx-auto mb-16 text-center fade-in">
+                    <div class="analyzing-container mb-6">
+                        <div class="analyzing-circle"></div>
+                        <div class="analyzing-circle"></div>
+                        <div class="analyzing-circle"></div>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Analyzing your symptoms</h3>
+                    <p class="text-gray-600">Our AI is carefully reviewing your case<span class="wave">.</span><span class="wave">.</span><span class="wave">.</span></p>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="{% if not symptoms and not results %}hidden{% endif %}">
+                    {% if symptoms or results %}
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+                        <!-- Symptoms Column -->
+                        <div class="glass-card overflow-hidden result-card" style="animation-delay: 0.1s">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
+                                <h2 class="text-xl font-semibold text-white flex items-center">
+                                    <i class="fas fa-clipboard-check mr-3"></i> Detected Symptoms
+                                </h2>
+                            </div>
+                            <div class="p-6">
+                                {% if symptoms %}
+                                <div class="space-y-4">
+                                    {% for symptom, confidence in symptoms %}
+                                    <div class="glass-card p-4 transition-all hover:scale-[1.02]">
+                                        <div class="flex justify-between items-center mb-1">
+                                            <span class="font-medium text-gray-800">{{ loop.index }}. {{ symptom }}</span>
+                                            <span class="text-xs font-semibold px-2 py-1 rounded-full {% if confidence >= 90 %}confidence-high{% elif confidence >= 70 %}confidence-medium{% else %}confidence-low{% endif %}">
+                                                {{ "%.1f"|format(confidence) }}% confidence
+                                            </span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-1.5">
+                                            <div class="bg-blue-500 h-1.5 rounded-full progress-bar" style="width: {{ confidence }}%"></div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                <div class="text-center py-8 text-gray-500">
+                                    <i class="fas fa-exclamation-circle text-3xl mb-3 text-gray-400"></i>
+                                    <p>No symptoms detected with high confidence</p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <!-- Recommendations Column -->
+                        <div class="glass-card overflow-hidden result-card" style="animation-delay: 0.2s">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-4">
+                                <h2 class="text-xl font-semibold text-white flex items-center">
+                                    <i class="fas fa-diagnoses mr-3"></i> Potential Diagnoses
+                                </h2>
+                            </div>
+                            <div class="p-6">
+                                {% if results %}
+                                <div class="space-y-6">
+                                    {% for result in results %}
+                                    <div class="glass-card p-5 transition-all hover:scale-[1.02]">
+                                        <div class="flex justify-between items-start mb-3">
+                                            <h3 class="text-lg font-semibold text-gray-800">{{ loop.index }}. {{ result.disease }}</h3>
+                                            <div class="flex items-center">
+                                                <span class="text-xs font-semibold px-2 py-1 rounded-full {% if result.confidence >= 0.8 %}confidence-high{% elif result.confidence >= 0.5 %}confidence-medium{% else %}confidence-low{% endif %}">
+                                                    {{ "%.0f"|format(result.confidence * 100) }}% match
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-4">
+                                            <div class="text-sm font-medium text-gray-600 mb-2 flex items-center">
+                                                <i class="fas fa-notes-medical mr-2 text-blue-500"></i> Matching symptoms:
+                                            </div>
+                                            <div class="flex flex-wrap gap-2">
+                                                {% for symptom in result.matching_symptoms %}
+                                                <span class="symptom-pill text-xs px-3 py-1 rounded-full">{{ symptom }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-600 mb-2 flex items-center">
+                                                <i class="fas fa-user-md mr-2 text-green-500"></i> Recommended specialists:
+                                            </div>
+                                            <div class="flex flex-wrap gap-2">
+                                                {% for specialist in result.specialists %}
+                                                <span class="specialist-pill text-xs px-3 py-1 rounded-full">{{ specialist }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                <div class="text-center py-8 text-gray-500">
+                                    <i class="fas fa-exclamation-circle text-3xl mb-3 text-gray-400"></i>
+                                    <p>No disease matches found for these symptoms</p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Footer -->
+                <div class="text-center text-sm text-gray-600 glass-card p-4 max-w-2xl mx-auto fade-in delay-400">
+                    <p class="mb-1"><i class="fas fa-info-circle mr-1"></i> This tool provides preliminary analysis only and is not a substitute for professional medical advice.</p>
+                    <p>© 2025 ICLINIQ | AI-Powered Knowledge Graph for Medical Query Analysis and Recommendations .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const fileInput = document.getElementById('fileInput');
+            const fileIndicator = document.getElementById('fileIndicator');
+            const fileName = document.getElementById('fileName');
+            const fileIcon = document.getElementById('fileIcon');
+            const uploadText = document.getElementById('uploadText');
+            const clearFile = document.getElementById('clearFile');
+            const form = document.getElementById('symptomForm');
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            const analyzeText = document.getElementById('analyzeText');
+            const analyzeLoading = document.getElementById('analyzeLoading');
+            const loadingState = document.getElementById('loadingState');
+            const resultsSection = document.getElementById('resultsSection');
+            
+            // Sidebar elements
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const collapseBtn = document.getElementById('collapseBtn');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+
+            // File input handling
+            fileInput.addEventListener('change', function() {
+                if (this.files.length > 0) {
+                    const file = this.files[0];
+                    fileName.textContent = file.name;
+                    
+                    // Set appropriate icon based on file type
+                    if (file.name.endsWith('.pdf')) {
+                        fileIcon.className = 'fas fa-file-pdf text-red-500 mr-2';
+                    } else if (file.name.endsWith('.docx')) {
+                        fileIcon.className = 'fas fa-file-word text-blue-500 mr-2';
+                    } else if (file.name.endsWith('.txt')) {
+                        fileIcon.className = 'fas fa-file-alt text-gray-500 mr-2';
+                    } else {
+                        fileIcon.className = 'fas fa-file text-blue-500 mr-2';
+                    }
+                    
+                    fileIndicator.classList.remove('hidden');
+                    uploadText.textContent = 'Change File';
+                }
+            });
+
+            // Clear file selection
+            clearFile.addEventListener('click', function(e) {
+                e.preventDefault();
+                fileInput.value = '';
+                fileIndicator.classList.add('hidden');
+                uploadText.textContent = 'Upload Medical File';
+            });
+
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                const textarea = this.querySelector('textarea');
+                if (textarea.value.trim() === '' && fileInput.files.length === 0) {
+                    e.preventDefault();
+                    alert('Please describe symptoms or upload a file');
+                    return;
+                }
+                
+                // Show loading state
+                e.preventDefault();
+                analyzeText.classList.add('hidden');
+                analyzeLoading.classList.remove('hidden');
+                loadingState.classList.remove('hidden');
+                resultsSection.classList.add('hidden');
+                
+                // Submit the form after showing loading animation
+                setTimeout(() => {
+                    this.submit();
+                }, 1500);
+            });
+
+            // Sidebar collapse functionality
+            collapseBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('collapsed');
+                mainContent.classList.toggle('expanded');
+                
+                // Change icon direction
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-chevron-left');
+                icon.classList.toggle('fa-chevron-right');
+            });
+
+            // Mobile sidebar toggle
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                    
+                    // Change icon
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+            }
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth < 1024 && 
+                    !sidebar.contains(e.target) && 
+                    e.target !== sidebarToggle && 
+                    !sidebarToggle.contains(e.target)) {
+                    sidebar.classList.remove('active');
+                    sidebarToggle.querySelector('i').className = 'fas fa-bars text-purple-600';
+                }
+            });
+
+            // Animate progress bars when they come into view
+            const animateProgressBars = () => {
+                const progressBars = document.querySelectorAll('.progress-bar');
+                progressBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            };
+
+            // Run animations when results are shown
+            if (resultsSection && !resultsSection.classList.contains('hidden')) {
+                animateProgressBars();
+            }
+
+            // Initialize with any existing file info
+            {% if file_info %}
+                fileName.textContent = '{{ file_info.name }}';
+                fileIndicator.classList.remove('hidden');
+                uploadText.textContent = 'Change File';
+                
+                if ('{{ file_info.type}}' === 'pdf') {
+                    fileIcon.className = 'fas fa-file-pdf text-red-500 mr-2';
+                } else if ('{{ file_info.type}}' === 'docx') {
+                    fileIcon.className = 'fas fa-file-word text-blue-500 mr-2';
+                } else {
+                    fileIcon.className = 'fas fa-file-alt text-gray-500 mr-2';
+                }
+            {% endif %}
+        });
+    </script>
+</body>
+</html>
