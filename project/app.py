@@ -94,7 +94,7 @@ class GraphEmbedder:
 
 # Usage
 try:
-    embedder = GraphEmbedder("bolt://44.201.21.92", "neo4j", "partitions-slave-diagrams")
+    embedder = GraphEmbedder("bolt://34.237.220.54", "neo4j", "needles-generals-skips")
     embedding_info = embedder.generate_embeddings(n_components=2)
     
     # Save embeddings
@@ -310,7 +310,7 @@ class MedicalSystem:
 # -------------------------- App Routes ----------------------
 
 # Initialize Medical System
-medical_system = MedicalSystem("bolt://44.201.21.92", "neo4j", "partitions-slave-diagrams")
+medical_system = MedicalSystem("bolt://34.237.220.54", "neo4j", "needles-generals-skips")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
